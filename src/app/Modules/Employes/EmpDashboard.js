@@ -61,7 +61,7 @@ const EmpDashboard = ({navigation}) => {
         let employees = employeeData
         let employeeValue = employeeData
         let filteredName = employees.filter((item) => {
-            return item.name.toLowerCase().match(text)
+            return item.name.toLowerCase().match(text) || item.email.toLowerCase().match(text)
         })
         setQuery(text)
         // console.log(text.length + employees)
